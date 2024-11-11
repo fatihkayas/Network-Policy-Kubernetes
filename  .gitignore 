@@ -1,0 +1,39 @@
+# Kubernetes .gitignore
+
+# Ignore all .env files (for sensitive configurations)
+.env
+.env.*
+
+# Ignore temporary files created by IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore node_modules (if using any Node.js for automation or scripts)
+node_modules/
+
+# Ignore compiled binaries
+*.exe
+*.out
+*.bin
+*.dll
+
+# Ignore Kubernetes artifacts
+*.yaml.backup
+*.log
+
+# Ignore Helm chart output
+charts/
+*.tgz
+
+# Ignore kubeconfig files (do not push credentials)
+kubeconfig/
+*.kubeconfig
+
+# Ignore other potential temporary files
+tmp/
+*.tgz
+.DS_Store

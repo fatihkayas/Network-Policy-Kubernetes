@@ -1,0 +1,7 @@
+# base/kustomization.yaml
+
+resources:
+  - service.yaml
+  - deployment.yaml
+  - network-policy.yaml
+  - namespace.yaml  # If you want the namespace to be defined globally in the base

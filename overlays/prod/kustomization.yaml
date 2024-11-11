@@ -1,0 +1,10 @@
+namespace: networkns
+
+resources:
+  - ../../base
+
+patches:
+  - path: network-policy-patch.yaml
+    target:
+      kind: NetworkPolicy
+      name: backend-network-policy
