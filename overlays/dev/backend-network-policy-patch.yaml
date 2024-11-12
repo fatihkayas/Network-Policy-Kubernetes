@@ -1,0 +1,11 @@
+# overlays/dev/backend-network-policy-patch.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: backend-network-policy
+spec:
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              environment: dev  # Allow traffic from all pods in the dev namespace

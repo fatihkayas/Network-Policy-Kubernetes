@@ -1,0 +1,11 @@
+# overlays/prod/backend-network-policy-patch.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: backend-network-policy
+spec:
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: frontend  # Restrict only frontend-app access in prod

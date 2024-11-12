@@ -1,14 +1,11 @@
 namespace: networkns
 
+# overlays/dev/kustomization.yaml
 resources:
   - ../../base
 
 patches:
-  - path: deployment-patch.yaml
-    target:
-      kind: Deployment
-      name: nginx-deployment
-  - path: network-policy-patch.yaml
+  - path: backend-network-policy-patch.yaml
     target:
       kind: NetworkPolicy
       name: backend-network-policy
